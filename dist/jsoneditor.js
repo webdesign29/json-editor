@@ -8042,7 +8042,12 @@ JSONEditor.defaults.resolvers.unshift(function(schema) {
   }
 })();
 
-  window.JSONEditor = JSONEditor;
+  if (typeof module !== 'undefined') {
+     module.exports = JSONEditor;
+  }
+  else {
+     window.JSONEditor = JSONEditor;
+  }
 })();
 
 //# sourceMappingURL=jsoneditor.js.map
